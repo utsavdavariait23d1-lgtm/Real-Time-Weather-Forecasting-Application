@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-Time Weather Forecasting Application</title>
+    <!-- Font Awesome for Weather Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="search">
+            <input type="text" placeholder="Enter city name..." spellcheck="false">
+            <button id="search-btn">
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+        </div>
+
+        <button class="location-btn" id="location-btn">
+            <i class="fa-solid fa-location-crosshairs"></i> Use My Location
+        </button>
+
+        <div class="error" id="error-msg">
+            <p>Oops! City not found. Please try again.</p>
+        </div>
+
+        <div class="weather" id="weather-card">
+            <div class="weather-icon-container" id="w-icon-container">
+                <!-- SVG will be injected here -->
+            </div>
+            <h1 class="temp">--°C</h1>
+            <h2 class="city">--</h2>
+            <p class="description">--</p>
+
+            <div class="details">
+                <div class="col">
+                    <i class="fa-solid fa-droplet"></i>
+                    <div>
+                        <p class="humidity">--%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p class="wind">-- km/h</p>
+                        <p>Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
