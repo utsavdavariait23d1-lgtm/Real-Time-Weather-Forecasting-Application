@@ -46,6 +46,8 @@ function updateUI(data) {
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
     document.querySelector(".description").innerHTML = data.weather[0].description;
+    document.querySelector(".day-temp").innerHTML = Math.round(data.main.temp_max) + "°C";
+    document.querySelector(".night-temp").innerHTML = Math.round(data.main.temp_min) + "°C";
 
     const condition = data.weather[0].main;
     const iconContainer = document.getElementById("w-icon-container");
